@@ -74,20 +74,22 @@ class _PlaceOrderState extends State<PlaceOrder> {
                         const SizedBox(
                           height: 10,
                         ),
-                        flatTextForm(quantity, "Quantity"),
+                        flatTextForm(quantity, "Quantity", "Quantity"),
                         const SizedBox(
                           height: 10,
                         ),
                         ElevatedButton(
                             onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) {
-                                  return OrderDetails(
-                                      colourType: colourType.text,
-                                      clothType: clotheType.text);
-                                }),
-                              );
+                              if (_formkey.currentState!.validate()) {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) {
+                                    return OrderDetails(
+                                        colourType: colourType.text,
+                                        clothType: clotheType.text);
+                                  }),
+                                );
+                              }
                             },
                             child: const Text("Proceed"))
                       ],
