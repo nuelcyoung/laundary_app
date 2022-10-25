@@ -62,7 +62,7 @@ class _PlaceOrderState extends State<PlaceOrder> {
                     key: _formkey,
                     child: Column(
                       children: [
-                        customTextForm(clotheType, "Clothe typr", ""),
+                        customTextForm(clotheType, "Clothe type", ""),
                         const SizedBox(
                           height: 10,
                         ),
@@ -74,7 +74,7 @@ class _PlaceOrderState extends State<PlaceOrder> {
                         const SizedBox(
                           height: 10,
                         ),
-                        flatTextForm(quantity, "Quantity", "Quantity"),
+                        flatTextForm(quantity, "Quantity"),
                         const SizedBox(
                           height: 10,
                         ),

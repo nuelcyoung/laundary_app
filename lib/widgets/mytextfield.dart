@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 Widget customTextForm(controller, labeltext, prefix) {
   return TextFormField(
     controller: controller,
+    validator: (value) {
+      if (value!.isEmpty || value=="") {
+        return " Required";
+      }
+      return null;
+    },
     decoration: InputDecoration(
         labelText: labeltext,
         border: const OutlineInputBorder(),
@@ -10,11 +16,11 @@ Widget customTextForm(controller, labeltext, prefix) {
   );
 }
 
-Widget flatTextForm(controller, label, value) {
+Widget flatTextForm(controller, label) {
   return TextFormField(
     validator: (value) {
-      if (value!.isEmpty || value.length < 3) {
-        return "$value is Required";
+      if (value!.isEmpty || value=="") {
+        return " Required";
       }
       return null;
     },
