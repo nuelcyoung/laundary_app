@@ -3,7 +3,7 @@ import 'package:ilaundary/screens/order_details.dart';
 import 'package:ilaundary/widgets/mytextfield.dart';
 
 class PlaceOrder extends StatefulWidget {
-  PlaceOrder({super.key});
+  const PlaceOrder({super.key});
 
   @override
   State<PlaceOrder> createState() => _PlaceOrderState();
