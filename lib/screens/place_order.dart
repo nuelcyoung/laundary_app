@@ -86,7 +86,9 @@ class _PlaceOrderState extends State<PlaceOrder> {
                                   MaterialPageRoute(builder: (context) {
                                     return OrderDetails(
                                         colourType: colourType.text,
-                                        clothType: clotheType.text);
+                                        clothType: clotheType.text,quantity:
+                                    quantity.text);
+                                    
                                   }),
                                 );
                               }
